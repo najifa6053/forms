@@ -24,7 +24,9 @@
                 name="name" 
                 placeholder="Enter your name" 
                 required 
-                size="30">
+                size="30"
+                maxlength="20"
+                minlength="3">
             </div> <br>
             <div class="form-group">
                 <label for="age">Age:</label>
@@ -33,7 +35,9 @@
                 name="age"
                 placeholder="Enter your age"
                 required
-                size="30"> 
+                size="30"
+                min="10"
+                max="60"> 
             </div> <br>
             <div class="form-group">
                 <label for="email">Email</label>
@@ -91,12 +95,12 @@
                 <label for="gender">Gender:</label><br>
                 <input type="radio"
                 id="male"
-                name="male"
+                name="gender"
                 value="male">
                 <label for="male">Male</label>
                 <input type="radio"
                 id="female"
-                name="female"
+                name="gender"
                 value="female">
                 <label for="female">Female</label>
                 </div><br>
@@ -119,10 +123,38 @@
                 <label for="gaming">Gaming</label>
             </div><br>
             <div class="form-group">
+                <label for="education">Education Level:</label>
+                <select id="education" name="education" required>
+                    <option value="">Select your education level</option>
+                    <option value="highschool">High School</option>
+                    <option value="bachelor">Bachelor's Degree</option>
+                    <option value="master">Master's Degree</option>
+                    <option value="phd">PhD</option>
+                </select>
+            </div><br>
+            <div class="form-group">
+                <label for="language">Preferred Language:</label>
+                <select id="language" name="language" required>
+                    <option value="">Select your preferred language</option>
+                    <option value="english">English</option>
+                    <option value="bangla">Bangla</option>
+                    <option value="spanish">Spanish</option>
+                    <option value="french">French</option>
+                </select>
+            </div><br>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                required>
+            </div><br>
+            <div class="form-group">
                 <label for="country">Country:</label>
                 <select id="country" name="country" required>
                     <option value="">Select your country</option>
-                    <option value="bangladesh">Bangladesh</option>
+                    <option value="bangladesh" selected>Bangladesh</option>
                     <option value="usa">USA</option>
                     <option value="canada">Canada</option>
                     <option value="uk">UK</option>
@@ -138,7 +170,8 @@
                 <input type="file"
                 id="fileUpload"
                 name="fileUpload"
-                accept=".jpg, .jpeg, .png, .pdf">
+                accept=".jpg, .jpeg, .png, .pdf"
+                multiple>
             </div><br>
             <div class="form-group">
                 <label for="terms">Accept Terms and Conditions:</label>
